@@ -1,0 +1,184 @@
+:root {
+  color-scheme: dark;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(56, 189, 248, 0.15), transparent 18%),
+    linear-gradient(135deg, #020617 0%, #0f172a 100%);
+}
+
+.app-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  margin: 0 0 0.4rem;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+header p {
+  margin: 0;
+  color: #94a3b8;
+}
+
+main {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(320px, 420px) 1fr;
+}
+
+.panel {
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.25);
+}
+
+.form-panel label,
+.list-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form-panel label {
+  margin-bottom: 1rem;
+}
+
+.form-panel input,
+.form-panel textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 0.85rem;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(15, 23, 42, 0.75);
+  color: #e2e8f0;
+  outline: none;
+}
+
+.form-panel textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 999px;
+  padding: 0.95rem 1.25rem;
+  background: #0ea5e9;
+  color: #fff;
+  font-weight: 600;
+  transition:
+    transform 0.15s ease,
+    background-color 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  background: #38bdf8;
+}
+
+button.secondary {
+  background: rgba(148, 163, 184, 0.16);
+  color: #cbd5e1;
+}
+
+button.danger {
+  background: #ef4444;
+}
+
+button.danger:hover {
+  background: #fca5a5;
+}
+
+.list-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.list-header {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-table-wrapper {
+  overflow-x: auto;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-table th,
+.product-table td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.product-table th {
+  font-size: 0.95rem;
+  color: #94a3b8;
+}
+
+.product-table tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.toast {
+  border-radius: 0.85rem;
+  padding: 0.95rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.toast.success {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.22);
+  color: #a7f3d0;
+}
+
+.toast.error {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.22);
+  color: #fecaca;
+}
+
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
